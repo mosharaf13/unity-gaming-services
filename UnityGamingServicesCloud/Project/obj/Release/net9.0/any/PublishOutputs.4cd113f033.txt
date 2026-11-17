@@ -1,0 +1,8 @@
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/UnityGamingServicesCloud.dll
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/UnityGamingServicesCloud.deps.json
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/UnityGamingServicesCloud.pdb
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/Unity.Services.CloudCode.Apis.dll
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/Unity.Services.CloudCode.Core.dll
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/Microsoft.Extensions.Logging.Abstractions.dll
+/var/folders/sl/d0lc93_d66s6hbvr2tqlxyfc0000gs/T/UnityGamingServicesCloud/module-compilation-cross-platform/Newtonsoft.Json.dll

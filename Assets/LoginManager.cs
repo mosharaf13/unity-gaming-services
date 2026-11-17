@@ -15,6 +15,8 @@ public class LoginManager : MonoBehaviour
     // [SerializeField] GameObject m_SignOut;
     // [SerializeField] Toggle m_PlayerAccountSignOut;
     
+    public Action PlayerSignedIn;
+    
     private async void Awake()
     {
         if(UnityServices.State == ServicesInitializationState.Uninitialized)
@@ -37,7 +39,7 @@ public class LoginManager : MonoBehaviour
     
             // Shows how to get the playerID
             Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
-    
+            PlayerSignedIn.Invoke();
         }
         catch (AuthenticationException ex)
         {
