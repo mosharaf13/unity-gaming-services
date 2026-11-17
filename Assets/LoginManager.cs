@@ -19,12 +19,16 @@ public class LoginManager : MonoBehaviour
     
     private async void Awake()
     {
-        if(UnityServices.State == ServicesInitializationState.Uninitialized)
+        if(UnityServices.State == ServicesInitializationState.Initialized)
         {
-            Debug.Log("Unity Services Initializing");
-            await UnityServices.InitializeAsync();
+            UnitySignInSubscription();
+        }
+        else
+        {
+            UnityServices.Initialized += UnitySignInSubscription;
         }
     }
+    
     public async void StartAnonymousSignIn()
     {
         await SignUpAnonymouslyAsync();
@@ -55,12 +59,10 @@ public class LoginManager : MonoBehaviour
          }
     }
     
-    /// <summary>
-    /// Initialize unity services and setup event handlers.
-    /// </summary>
-    private async void Start()
+
+
+    private void UnitySignInSubscription()
     {
-        await UnityServices.InitializeAsync();
         PlayerAccountService.Instance.SignedIn += SignInWithUnity;
     }
 
@@ -166,4 +168,9 @@ public class LoginManager : MonoBehaviour
             m_ExceptionText.text = ex != null ? $"{ex.GetType().Name}: {ex.Message}" : "";
         }
 
+        private void OnDestroy()
+        {
+            PlayerAccountService.Instance.SignedIn -= SignInWithUnity;
+            UnityServices.Initialized -= UnitySignInSubscription;
+        }
 }
